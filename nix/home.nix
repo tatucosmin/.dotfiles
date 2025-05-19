@@ -78,21 +78,20 @@
     enable = true;
     settings = {
       font = {
-				normal = {
-					family = "ZedMono Nerd Font";
-					style = "Regular";
-				};
-				bold = {
-					family = "ZedMono Nerd Font";
-					style = "Bold";
-				};
-				italic = {
-					family = "ZedMono Nerd Font";
-					style = "Italic";
-				};
-				size = 14;
-			};
+        normal = {
+          family = "ZedMono Nerd Font";
+          style = "Regular";
+        };
+        bold = {
+          family = "ZedMono Nerd Font";
+          style = "Bold";
+        };
+        italic = {
+          family = "ZedMono Nerd Font";
+          style = "Italic";
+        };
+        size = 14;
+      };
     };
   };
-
 }
