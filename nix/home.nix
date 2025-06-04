@@ -19,9 +19,19 @@
       ruff
       gh
       eza
+      httpie
       
       helix
       nil
+      rustup
+      bacon
+      codecrafters-cli
+
+      go
+      delve
+      gopls
+      golangci-lint
+      golangci-lint-langserver
     ];
   };
 
@@ -48,13 +58,32 @@
     enable = true;
     settings = {
       theme = "github_dark";
+      editor = {
+        end-of-line-diagnostics = "hint";
+      };
     };
-    languages.language = [
-      {
+    languages = {
+      language-server.golangci-lint-lsp = {
+        command = "golangci-lint-langserver";
+      };
+      language-server.golangci-lint-lsp.config = {
+        command = ["golangci-lint" "run" "--output.json.path=stdout" "--show-stats=false" "--issues-exit-code=1"];
+      };
+      language-server.rust-analyzer.config.check = {
+        command = "clippy";
+      };
+      language-server.rust-analyzer.config.cargo = {
+        features = "all";
+      };
+      language = [{
         name = "nix";
         auto-format = true;
       }
-    ];
+      {
+        name = "rust";
+        auto-format = true;
+      }];
+    };
   };
   
   programs.zsh = {

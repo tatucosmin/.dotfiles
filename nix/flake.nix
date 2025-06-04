@@ -25,7 +25,6 @@
           pkgs.bitwarden-desktop
           pkgs.pyenv
           pkgs.slack
-          pkgs.discord
         ];
 
       homebrew = {
@@ -34,7 +33,14 @@
 
         taps = [ ];
         brews = [ ];
-        casks = [ "font-zed-mono-nerd-font" "google-chrome" "docker" ];
+        casks = [
+          "font-zed-mono-nerd-font"
+          "google-chrome"
+          "docker"
+          "discord"
+          "prismlauncher"
+          "httpie"
+        ];
       };
 
       # Necessary for using flakes on this system.
